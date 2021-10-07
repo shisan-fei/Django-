@@ -8,3 +8,6 @@ def index(request):
 
 def love(request):
     return HttpResponse('i love you si mi da')
+
+def test_templates(request):
+    return render(request,'aa/index.html')

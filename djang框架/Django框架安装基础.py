@@ -1,7 +1,7 @@
 '''
-pip install django==2.2.*   安装
-django-admin startproject web  启动一个项目
-cd web    进入目录
+pip install django==2.2.*      安装
+django-admin startproject web  创建一个项目
+cd web                         进入目录
 python manage.py runserver     启动服务
     Performing system checks...
     System check identified no issues (0 silenced).
@@ -11,13 +11,13 @@ python manage.py runserver     启动服务
     Django version 2.2.24, using settings 'web.settings'
     Starting development server at http://127.0.0.1:8000/
     Quit the server with CTRL-BREAK.
+此时访问127.0.0.1:8000 就可以访问
 
 python manage.py startapp 应用名   ：创建应用
-
 '''
 
 '''
-创建一个应用名叫myhome
+创建一个应用名叫myhome，访问/时显示hello world
 python manage.py startapp myhome 
 1. 在创建的应用中，写view函数   myhome/view.py
 视图函数，输出hello world
@@ -26,12 +26,12 @@ python manage.py startapp myhome
         from django.http import HttpResponse
             def index(request):
             return HttpResponse('hello word')
-2. 给当前应用指定路由        应用名/urls.py,子路由文件
+2. 给当前应用指定路由        myhome/urls.py,子路由文件
     from django.contrib import admin
     from django.urls import path
     from . import views
     urlpatterns = [
-        path('/', views.index),    #当访问/时就路由到view文件的index
+        path('', views.index),    #当访问/时就路由到view文件的index
     ]
 
 3. 在跟路由配置当前应用   web/urls.py
