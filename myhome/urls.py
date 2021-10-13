@@ -6,7 +6,8 @@ import myhome
 
 urlpatterns = [
     path('', views.index,name='myhome_index'),    #当访问/时就路由到view文件的index
-    path('deam',views.deam,name='myhome_deam')
+    path('deam',views.deam,name='myhome_deam'),
+    path('addbook',views.addbook,name='book')
     # path('love',views.love),   #当访问love时路由到view文件love函数
     # path('',views.test_templates)
 ]
