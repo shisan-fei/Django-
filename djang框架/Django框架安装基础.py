@@ -1,8 +1,10 @@
 '''
 pip install django==2.2.*      安装
-django-admin startproject web  创建一个项目
+django-admin startproject web  创建一个项目，叫做web
 cd web                         进入目录
 python manage.py runserver     启动服务
+python manage.py runserver 0.0.0.0:80  指定ip和端口
+
     Performing system checks...
     System check identified no issues (0 silenced).
     You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.

@@ -6,7 +6,7 @@ from . import models
 # Create your views here.
 def index(request):
     # return HttpResponse('欢迎访问…………')
-    return render(request,'aa/index.html')  
+    return render(request,'aa/index.html')  #返回html页面，html存放在templates目录
 
 def love(request):
     return HttpResponse('i love you si mi da')
