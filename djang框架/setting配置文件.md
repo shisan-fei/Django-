@@ -80,9 +80,14 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/'   #配置静态文件目录
 STATICFILES_DIRS = [
      os.path.join(BASE_DIR,'static/')
 ]
+
+# 模型类中使用上传文件的字段, 文件访问路径时相对MEDIA
+MEDIA_URL = '/media/'   # url映射
+# 设置静态文件路径为主目录下的media文件夹
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 ```
 
