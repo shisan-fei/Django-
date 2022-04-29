@@ -4,8 +4,9 @@
 BASE_DIR = Path(__file__).resolve().parent.parent      #项目根目录
 DEBUG = True           #是否为调试模式
 
-ALLOWED_HOSTS = []    #允许访问的ip
+ALLOWED_HOSTS = []    #允许访问的ip，那些ip可以访问当前项目，一般为空
 
+#配置手动创建网站子应用
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -13,6 +14,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myhome',  #子应用
+    'learn'
 ]
 
 MIDDLEWARE = [

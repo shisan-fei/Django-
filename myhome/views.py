@@ -1,6 +1,8 @@
 import re
+#render渲染页面的方法
 from django.shortcuts import render
-from django.http import HttpResponse
+#渲染字符的方法
+from django.http import HttpResponse,HttpResponseNotFound
 from . import models
 
 # Create your views here.
@@ -55,3 +57,7 @@ def deam(request):
 def addbook(request):
     
     return render(request,'books/add.html')
+
+
+def foor(request):
+    return HttpResponseNotFound('<h1>Page not found</h1>')

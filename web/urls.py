@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from stringprep import in_table_c11_c12
 from django.contrib import admin
 from django.urls import path,include
 
@@ -20,5 +21,6 @@ import myhome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myhome.urls'))
+    #path('',include('myhome.urls')),    #让请求去找myhome这个app的url规则，include()方法是路由转发
+    path('',include('learn.urls'))
 ]

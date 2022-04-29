@@ -26,5 +26,13 @@ class pic(models.Model):
     # 或者 被传到`MEDIA_ROOT/uploads/2015/01/30`目录，增加了一个时间划分
     upload = models.FileField(upload_to='uploads/%Y/%m/%d/')
 
+    
+#blank参数和 null参数  
+photo = models.ImageField(verbose_name='照片',    
+                              upload_to=get_photo,
+                              blank=True,
+                              null=True)
 
-
+#blank 设置为True时，页面填写字段可以为空。设置为False时，字段是必须填写的。字符型字段CharField和TextField是用空字符串来存储空值的。如果为True，字段允许为空，默认不允许.
+#null 设置为True时，django用Null来存储空值。日期型、时间型和数字型字段不接受空字符串。
+# 所以设置IntegerField，DateTimeField型字段可以为空时，需要将blank，null均设为True。如果为True，空值将会被存储为NULL，默认为False。
